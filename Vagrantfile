@@ -3,8 +3,7 @@
 
 Vagrant.configure("2") do |config|
 	config.vm.define "kali-linux" do |kali|
-		#kali.vm.box = "kalilinux/rolling"
-		kali.vm.box = "Sliim/kali-linux-2.0-amd64"
+		kali.vm.box = "kalilinux/rolling"
 		kali.vm.box_check_update = false
 		kali.vm.hostname = "kali-linux"
 		kali.vm.provision "shell", path: "scripts/install.sh"
@@ -13,6 +12,7 @@ Vagrant.configure("2") do |config|
 			v.gui = false
 #			v.memory = 4096
 			v.memory = 2048
+#			v.memory = 1024
 #			v.cpus = 2
    		end
 	end
