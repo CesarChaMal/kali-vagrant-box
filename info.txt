@@ -1,2 +1,4 @@
 vagrant up
 vagrant cloud auth
+vagrant ssh-config
+vagrant ssh kali-linux
